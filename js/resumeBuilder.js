@@ -114,26 +114,27 @@ education.display = function() {
         var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[school].dates);
         $(".education-entry:last").append(formattedSchoolDates);
     }
+
     function displayCourses() {
-    $("#education").append(HTMLonlineClasses, HTMLschoolStart);
+        $("#education").append(HTMLonlineClasses, HTMLschoolStart);
 
-    for (var course = 0; course < education.schools.length; course++) {
+        for (var course = 0; course < education.schools.length; course++) {
 
-        var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
-        $(".education-entry:last").append(formattedOnlineTitle);
+            var formattedOnlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[course].title);
+            $(".education-entry:last").append(formattedOnlineTitle);
 
-        var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
-        $(".education-entry:last").append(formattedOnlineSchool);
+            var formattedOnlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[course].school);
+            $(".education-entry:last").append(formattedOnlineSchool);
 
-        var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
-        $(".education-entry:last").append(formattedOnlineDates);
+            var formattedOnlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[course].dates);
+            $(".education-entry:last").append(formattedOnlineDates);
 
-        var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
-        $(".education-entry:last").append(formattedOnlineURL);
+            var formattedOnlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[course].url);
+            $(".education-entry:last").append(formattedOnlineURL);
 
+        }
     }
-}
-displayCourses();
+    displayCourses();
 };
 education.display();
 
@@ -182,7 +183,7 @@ work.display = function() {
         $(".work-entry:last").append(formattedworkDates);
         $(".work-entry:last").append(formattedworkDescription);
     }
-}
+};
 work.display();
 
 
@@ -229,10 +230,9 @@ projects.display = function() {
             }
         }
     }
-}
+};
 projects.display();
 
 
 
 $("#mapDiv").append(googleMap);
-
